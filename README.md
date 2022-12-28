@@ -46,4 +46,4 @@
 
 - Java 11
 - Gradle 7.5.1
-- assertj 3.23.1
+- AssertJ 3.23.1
