@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group 'com.youth'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    junitVersion = '5.9.1'
+}
+
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+    testImplementation 'org.assertj:assertj-core:3.23.1'
+}
+
+test {
+    useJUnitPlatform()
+}
