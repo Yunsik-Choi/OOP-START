@@ -1,15 +1,15 @@
 package domain;
 
 public class Customer {
-    private Card card;
+    private GiftCard giftCard;
     private Point point;
 
-    public Customer(final Card card, final Point point) {
-        this.card = card;
+    public Customer(final GiftCard giftCard, final Point point) {
+        this.giftCard = giftCard;
         this.point = point;
     }
 
-    public Card getCard() {
-        return card;
+    public GiftCard getGiftCard() {
+        return giftCard;
     }
 }

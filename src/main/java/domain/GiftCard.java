@@ -1,9 +1,9 @@
 package domain;
 
-public class Card {
+public class GiftCard {
     private int balance;
 
-    public Card(int balance) {
+    public GiftCard(int balance) {
         this.balance = balance;
     }
 
