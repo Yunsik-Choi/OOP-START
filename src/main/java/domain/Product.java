@@ -9,15 +9,15 @@ public class Product {
         this.stock = stock;
     }
 
-    public int getStock() {
-        return stock;
-    }
-
-    public void setStock(int stock) {
-        this.stock = stock;
-    }
-
     public int getPrice() {
         return price;
+    }
+
+    public boolean isStockLessThanOne() {
+        return stock < 1;
+    }
+
+    public void minusStock() {
+        stock -= 1;
     }
 }
