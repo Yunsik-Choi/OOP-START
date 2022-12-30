@@ -7,9 +7,6 @@ public class OrderService {
 
     public void order(Customer customer, Product product) {
         // 상품 관리 로직
-        if (product.isSoldOut()) {
-            throw new RuntimeException("주문할 수 없는 상품입니다.");
-        }
         product.minusStock();
 
         // 상품 결제 로직
