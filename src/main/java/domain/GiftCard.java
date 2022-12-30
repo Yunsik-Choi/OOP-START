@@ -7,11 +7,14 @@ public class GiftCard {
         this.value = value;
     }
 
-    public int getValue() {
-        return value;
-    }
+    public void minus(int price) {
+        int originBalance = value;
+        int productPrice = price;
+        int remainBalance = originBalance - productPrice;
 
-    public void setValue(int value) {
-        this.value = value;
+        if (remainBalance < 0) {
+            throw new RuntimeException("잔액이 부족합니다.");
+        }
+        value = remainBalance;
     }
 }
