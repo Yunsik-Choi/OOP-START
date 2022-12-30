@@ -1,9 +1,9 @@
 package domain;
 
 public class Point {
-    private int point;
+    private int value;
 
-    public Point(final int point) {
-        this.point = point;
+    public Point(final int value) {
+        this.value = value;
     }
 }
