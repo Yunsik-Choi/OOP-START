@@ -9,8 +9,8 @@ public class Product {
         this.stock = stock;
     }
 
-    public boolean isStockLessThanOne() {
-        return stock < 1;
+    public boolean isSoldOut() {
+        return stock < 5;
     }
 
     public void minusStock() {
