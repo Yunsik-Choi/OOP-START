@@ -9,22 +9,30 @@ public class Product {
         this.stock = stock;
     }
 
-    public void minusStock() {
+    public void sellTo(Customer customer) {
+        // 상품 관리 로직
+        this.minusStock();
+
+        // 상품 결제 로직
+        customer.payFor(this);
+    }
+
+    private void minusStock() {
         if (isSoldOut()) {
             throw new RuntimeException("주문할 수 없는 상품입니다.");
         }
         stock -= 1;
     }
 
-    public boolean isSoldOut() {
+    private boolean isSoldOut() {
         return stock < 5;
+    }
+
+    private boolean isPriceUnderMinimum() {
+        return price < 1000;
     }
 
     public void payBy(GiftCard giftCard) {
         giftCard.minus(price);
-    }
-
-    public boolean isPriceUnderMinimum() {
-        return price < 1000;
     }
 }
