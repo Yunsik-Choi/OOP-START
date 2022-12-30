@@ -32,7 +32,7 @@ public class Product {
         return price < 1000;
     }
 
-    public void payBy(GiftCard giftCard) {
-        giftCard.minus(price);
+    public void payBy(Money money) {
+        money.minus(price);
     }
 }

@@ -1,9 +1,9 @@
 package domain;
 
-public class GiftCard implements Money {
+public class Point implements Money {
     private int value;
 
-    public GiftCard(int value) {
+    public Point(int value) {
         this.value = value;
     }
 
