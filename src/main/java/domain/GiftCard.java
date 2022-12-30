@@ -1,17 +1,17 @@
 package domain;
 
 public class GiftCard {
-    private int balance;
+    private int value;
 
-    public GiftCard(int balance) {
-        this.balance = balance;
+    public GiftCard(int value) {
+        this.value = value;
     }
 
-    public int getBalance() {
-        return balance;
+    public int getValue() {
+        return value;
     }
 
-    public void setBalance(int balance) {
-        this.balance = balance;
+    public void setValue(int value) {
+        this.value = value;
     }
 }

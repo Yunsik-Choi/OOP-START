@@ -14,13 +14,13 @@ public class OrderService {
         product.setStock(remainStock);
 
         // 상품 결제 로직
-        int originBalance = customer.getGiftCard().getBalance();
+        int originBalance = customer.getGiftCard().getValue();
         int productPrice = product.getPrice();
         int remainBalance = originBalance - productPrice;
 
         if (remainBalance < 0) {
             throw new RuntimeException("잔액이 부족합니다.");
         }
-        customer.getGiftCard().setBalance(remainBalance);
+        customer.getGiftCard().setValue(remainBalance);
     }
 }
