@@ -1,12 +1,10 @@
 package domain;
 
 public class Product {
-    private String productName;
     private int price;
     private int stock;
 
-    public Product(final String productName, final int price, final int stock) {
-        this.productName = productName;
+    public Product(final int price, final int stock) {
         this.price = price;
         this.stock = stock;
     }
